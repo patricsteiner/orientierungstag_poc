@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h1>Finde heraus, welches Team zu dir passt</h1>
+
+    <div>
+      <ion-list>
+        <ion-item>
+          <ion-label></ion-label>
+          <div style="display: flex; justify-content: space-between; width: 100%">
+            <div>
+              <ion-note>Trifft nicht zu</ion-note>
+            </div>
+            <div>
+              <ion-note>Trifft voll zu</ion-note>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item *ngFor="let question of questions; let i = index">
+          <ion-label>{{question}}</ion-label>
+          <ion-range [snaps]="true" max="4" [pin]="true" [(ngModel)]="answers[i]"></ion-range>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="ion-text-center">
+      <ion-button color="success" (click)="submit()">Auswerten</ion-button>
+    </div>
+
+  </div>
+</ion-content>

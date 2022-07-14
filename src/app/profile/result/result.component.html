@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Auswertung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h1>Deine Auswerung</h1>
+    <pre>Antworten: {{result}}</pre>
+    <ion-card *ngFor="let team of teams; let i = index">
+      <ion-card-header>
+        <ion-card-title><strong>{{i+1}}.</strong> | {{team}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Lorem ipsum dolor sit amet...</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

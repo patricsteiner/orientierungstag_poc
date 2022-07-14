@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Teams</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="team$ | async as team">
+    <ion-card-header>
+      <ion-card-title>Team {{team}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet...</p>
+      <video autoplay controls muted height="600px" [src]="'assets/'+team+'.mp4'"></video>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
