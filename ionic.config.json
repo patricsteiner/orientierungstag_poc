@@ -1,0 +1,7 @@
+{
+  "name": "orientierungstag-poc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
